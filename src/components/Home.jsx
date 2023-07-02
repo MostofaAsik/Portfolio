@@ -26,9 +26,9 @@ const Home = () => {
             <div className='max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-center h-full px-4 md:flex-row '>
                 <div className='flex flex-col justify-center' >
                     <h2 className='text-5xl md:text-7xl font--bold font-serif text-teal-500 mt-4 md:mt-0'>
-                        <LightSpeed left>
-                            Mostofa Asik
-                        </LightSpeed>
+
+                        Mostofa Asik
+
 
 
 
