@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import project1 from '../assets/portfolio/img1.png'
 import project2 from '../assets/portfolio/img2.png'
 import project3 from '../assets/portfolio/img3.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Projects = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 800, // Animation duration (in milliseconds)
+            easing: 'ease-in-cubic', // Animation easing
+            once: false, // Only animate elements once
+            mirror: true, // Animate elements on both scroll up and scroll down
+        });
+    }, []);
 
     const projects = [
         {
@@ -39,7 +49,7 @@ const Projects = () => {
                     <h2 className='text-5xl font-bold inline border-b-4 border-gray-500'> Projects</h2>
                     <p className='text-xl font-semibold text-gray-500 pt-4'>Check  out some of  my  work right here</p>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-2 md:px-12 '>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-2 md:px-12 ' >
                     {
                         projects.map(({ id, src, title, client, server, demo }) => (
                             <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import img1 from '../assets/html.png'
 import img2 from '../assets/css.png'
 import img3 from '../assets/tailwind.png'
@@ -11,7 +13,18 @@ import img9 from '../assets/ex.png'
 import img10 from '../assets/mongodb.png'
 import img11 from '../assets/github.png'
 
+
 const Skills = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 800, // Animation duration (in milliseconds)
+            easing: 'ease-in-cubic', // Animation easing
+            once: false, // Only animate elements once
+            mirror: true, // Animate elements on both scroll up and scroll down
+        });
+    }, []);
+
 
     const skills = [
         {
@@ -84,13 +97,13 @@ const Skills = () => {
     ]
 
     return (
-        <div name='skills' className='bg-gradient-to-b  from-gray-800 to-black w-full text-white '>
+        <div name='skills' className='bg-gradient-to-b  from-gray-800 to-black w-full text-white ' >
             <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
                 <div className='pb-8 text-center'>
                     <h2 className='text-5xl font-bold inline border-b-4 border-gray-500'> Skills</h2>
                     <p className='text-xl font-semibold text-gray-500 pt-4'>These are the technologies I've worked with</p>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-2 md:px-12 text-center py-8'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-2 md:px-12 text-center py-8' data-aos="zoom-in">
                     {
                         skills.map(({ id, src, title, style }) => (
                             <div key={id} className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg  ${style}`}>

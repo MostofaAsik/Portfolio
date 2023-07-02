@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeroImage from '../assets/HeroImage.png'
 import { HiOutlineArrowNarrowRight } from 'react-icons/Hi';
 import { BsFillPersonLinesFill, BsArrowDownCircleFill } from 'react-icons/bs';
@@ -7,13 +7,24 @@ import SocialLinks from './SocialLinks';
 import LightSpeed from 'react-reveal/LightSpeed';
 import { TypeAnimation } from 'react-type-animation';
 import SocialLinks2 from './SocialLinks2';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Home = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 800, // Animation duration (in milliseconds)
+            easing: 'ease-in-out', // Animation easing
+            once: false, // Only animate elements once
+            mirror: true, // Animate elements on both scroll up and scroll down
+        });
+    }, []);
     return (
-        <div name='home' className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 pt-20 py-10 md:py-0 md:pt-0 '>
+        <div name='home' className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 pt-20 py-10 md:py-0 md:pt-0 ' >
             <div className='max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-center h-full px-4 md:flex-row '>
-                <div className='flex flex-col justify-center'>
+                <div className='flex flex-col justify-center' >
                     <h2 className='text-5xl md:text-7xl font--bold font-serif text-teal-500 mt-4 md:mt-0'>
                         <LightSpeed left>
                             Mostofa Asik
@@ -54,11 +65,11 @@ const Home = () => {
                         </button>
 
                     </div>
-                    <div className=''>
+                    <div className='' >
                         <SocialLinks2></SocialLinks2>
                     </div>
                 </div>
-                <div className='mt-6 md:mt-0'>
+                <div className='mt-6 md:mt-0' >
                     <img src={HeroImage} alt="My Picture" className='rounded-2xl mx-auto w-2/3 md:full' />
                 </div>
 
