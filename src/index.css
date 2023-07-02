@@ -9,3 +9,23 @@
         font-family: 'Raleway', sans-serif;
     }
 }
+
+.screen {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    /* margin: 50px auto; */
+
+}
+
+.screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: all 4s ease-in-out;
+}
+
+.screen:hover img {
+    object-position: bottom center;
+}

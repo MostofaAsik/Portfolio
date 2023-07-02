@@ -53,7 +53,9 @@ const Projects = () => {
                     {
                         projects.map(({ id, src, title, client, server, demo }) => (
                             <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                                <img src={src} alt="project-image" className='rounded-md duration-200 hover:scale-105 h-[200px] ' />
+                                <div className='screen'>
+                                    <img src={src} alt="project-image" />
+                                </div>
                                 <h2 className='font-sans mt-2'>{title} </h2>
                                 <div className='flex items-center justify-between pt-6  mt-auto md:mt-auto px-2  mb-3'>
                                     <button className='  duration-200 hover:scale-105 hover:font-sans hover:underline hover:text-red-500 '>
