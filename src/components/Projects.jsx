@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import project1 from '../assets/portfolio/img1.png'
-import project2 from '../assets/portfolio/img2.png'
-import project3 from '../assets/portfolio/img3.png'
+import project1 from '../assets/portfolio/img1 (2).png'
+import project2 from '../assets/portfolio/img2 (2).png'
+import project3 from '../assets/portfolio/img3 (3).png'
+import project4 from '../assets/portfolio/img4.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -16,6 +17,14 @@ const Projects = () => {
     }, []);
 
     const projects = [
+        {
+            id: 4,
+            src: project4,
+            title: 'Plan Picker (Team Work)',
+            client: 'https://github.com/nikkonbd/plan-picker-web',
+            server: 'https://github.com/nrb04/PLANpicker_server',
+            demo: 'https://planpicker.web.app/'
+        },
         {
             id: 1,
             src: project1,
@@ -43,7 +52,7 @@ const Projects = () => {
     ]
 
     return (
-        <div name="projects" className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'>
+        <div name="projects" className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-full '>
             <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
                 <div className='pb-8 text-center'>
                     <h2 className='text-5xl font-bold inline border-b-4 border-gray-500'> Projects</h2>
@@ -53,10 +62,11 @@ const Projects = () => {
                     {
                         projects.map(({ id, src, title, client, server, demo }) => (
                             <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                                <div className='screen'>
-                                    <img src={src} alt="project-image" />
+                                <div className='imgdiv ' >
+                                    <img src={src} alt="project-image"
+                                    />
                                 </div>
-                                <h2 className='font-sans mt-2'>{title} </h2>
+                                <h2 className='font-sans mt-2 px-1 text-red-600'>{title} </h2>
                                 <div className='flex items-center justify-between pt-6  mt-auto md:mt-auto px-2  mb-3'>
                                     <button className='  duration-200 hover:scale-105 hover:font-sans hover:underline hover:text-red-500 '>
                                         <a href={client} target='_blank'>Client</a>

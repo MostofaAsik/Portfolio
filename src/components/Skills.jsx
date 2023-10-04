@@ -12,6 +12,7 @@ import img8 from '../assets/firebase.png'
 import img9 from '../assets/ex.png'
 import img10 from '../assets/mongodb.png'
 import img11 from '../assets/github.png'
+import img12 from '../assets/redux.png'
 
 
 const Skills = () => {
@@ -64,6 +65,12 @@ const Skills = () => {
             style: 'shadow-orange-500'
         },
         {
+            id: 12,
+            src: img12,
+            title: "Redux",
+            style: 'shadow-red-500'
+        },
+        {
             id: 7,
             src: img7,
             title: "Node",
@@ -97,13 +104,13 @@ const Skills = () => {
     ]
 
     return (
-        <div name='skills' className='bg-gradient-to-b  from-gray-800 to-black w-full text-white ' >
+        <div name='skills' className='bg-gradient-to-b  from-gray-800 to-black w-full text-white  ' >
             <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
                 <div className='pb-8 text-center'>
                     <h2 className='text-5xl font-bold inline border-b-4 border-gray-500'> Skills</h2>
                     <p className='text-xl font-semibold text-gray-500 pt-4'>These are the technologies I've worked with</p>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-2 md:px-12 text-center py-8' >
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-2 md:px-12 text-center py-8 overflow-hidden' >
                     {
                         skills.map(({ id, src, title, style }) => (
                             <div key={id} className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg  ${style}`}>

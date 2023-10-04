@@ -10,7 +10,7 @@
     }
 }
 
-.screen {
+.imgdiv {
     width: 100%;
     height: 300px;
     overflow: hidden;
@@ -18,14 +18,14 @@
 
 }
 
-.screen img {
+.imgdiv img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top center;
-    transition: all 4s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
-.screen:hover img {
+.imgdiv:hover img {
     object-position: bottom center;
 }
